@@ -20,4 +20,11 @@ public class SimilarNameTest {
         Name otherName = new Name("Fake Name");
         assertFalse(thisName.isSimilar(otherName));
     }
+    
+    @Test
+    public void otherName_Similar() throws IllegalValueException {
+        Name thisName = new Name("Muhammad Hamsyari Bin Rozman");
+        Name otherName = new Name("Muhammad Hamsyari Bin Rozman");
+        assertTrue(thisName.isSimilar(otherName));
+    }
 }
