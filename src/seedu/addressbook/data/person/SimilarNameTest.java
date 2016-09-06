@@ -15,21 +15,21 @@ public class SimilarNameTest {
     }
     
     @Test
-    public void otherName_NotSimilar() throws IllegalValueException {
+    public void otherName_notSimilar() throws IllegalValueException {
         Name thisName = new Name("Muhammad Hamsyari Bin Rozman");
         Name otherName = new Name("Fake Name");
         assertFalse(thisName.isSimilar(otherName));
     }
     
     @Test
-    public void otherName_Similar() throws IllegalValueException {
+    public void otherName_similar() throws IllegalValueException {
         Name thisName = new Name("Muhammad Hamsyari Bin Rozman");
         Name otherName = new Name("Muhammad Hamsyari Bin Rozman");
         assertTrue(thisName.isSimilar(otherName));
     }
     
     @Test
-    public void otherName_SimilarDifferentCase() throws IllegalValueException {
+    public void otherName_isSimilar_DifferentCase() throws IllegalValueException {
         Name thisName = new Name("Muhammad Hamsyari Bin Rozman");
         Name otherName = new Name("MuHamMad hAmsYArI bIN ROzmAn");
         assertTrue(thisName.isSimilar(otherName));
