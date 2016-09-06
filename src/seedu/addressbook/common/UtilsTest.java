@@ -10,12 +10,14 @@ public class UtilsTest {
     
     @Test
     public void testNullItems(){
-        assertEquals(true, Utils.isAnyNull((Object) null));
+        Object[] objArray = new Object[] {null, null, null};
+        assertEquals(true, Utils.isAnyNull(objArray));
     }
     
     @Test
     public void testNoNullItems(){
-        assertEquals(false, Utils.isAnyNull(new Object()));
+        Object[] objArray = new Object[] {new Object(), new Object(), new Object()};
+        assertEquals(false, Utils.isAnyNull(objArray));
     }
     
     @Test
