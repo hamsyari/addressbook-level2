@@ -34,4 +34,11 @@ public class SimilarNameTest {
         Name otherName = new Name("MuHamMad hAmsYArI bIN ROzmAn");
         assertTrue(thisName.isSimilar(otherName));
     }
+    
+    @Test
+    public void otherName_subsetName() throws IllegalValueException {
+        Name thisName = new Name("Muhammad Hamsyari Bin Rozman");
+        Name otherName = new Name("Hamsyari");
+        assertTrue(thisName.isSimilar(otherName));
+    }
 }
