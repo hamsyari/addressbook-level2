@@ -13,4 +13,11 @@ public class SimilarNameTest {
         Name name = new Name("Muhammad Hamsyari Bin Rozman");
         assertFalse(name.isSimilar(null));
     }
+    
+    @Test
+    public void otherName_NotSimilar() throws IllegalValueException {
+        Name thisName = new Name("Muhammad Hamsyari Bin Rozman");
+        Name otherName = new Name("Fake Name");
+        assertFalse(thisName.isSimilar(otherName));
+    }
 }
