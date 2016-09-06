@@ -11,13 +11,13 @@ public class UtilsTest {
     @Test
     public void testNullItems(){
         Object[] objArray = new Object[] {null, null, null};
-        assertEquals(true, Utils.isAnyNull(objArray));
+        assertTrue(Utils.isAnyNull(objArray));
     }
     
     @Test
     public void testNoNullItems(){
         Object[] objArray = new Object[] {new Object(), new Object(), new Object()};
-        assertEquals(false, Utils.isAnyNull(objArray));
+        assertFalse(Utils.isAnyNull(objArray));
     }
     
     @Test
@@ -26,7 +26,7 @@ public class UtilsTest {
         sampleArrayList.add("Item 1");
         sampleArrayList.add("Item 2");
         sampleArrayList.add("Item 3");
-        assertEquals(true, Utils.elementsAreUnique(sampleArrayList));
+        assertTrue(Utils.elementsAreUnique(sampleArrayList));
     }
     
     @Test
@@ -35,6 +35,6 @@ public class UtilsTest {
         sampleArrayList.add("Item 1");
         sampleArrayList.add("Item 1");
         sampleArrayList.add("Item 1");
-        assertEquals(true, Utils.elementsAreUnique(sampleArrayList));
+        assertFalse(Utils.elementsAreUnique(sampleArrayList));
     }
 }
